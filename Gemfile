@@ -52,5 +52,21 @@ group :development do
   gem 'bootstrap_form'
 end
 
+group :test do
+  # testing framework
+  gem 'rspec-rails', '~> 3.6'
+  # used to create sample data
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  # support headless drivers
+  gem 'headless'
+  # simulate a user's interaction with the app
+  gem 'capybara'
+  # webdriver for capybara: gives js support to the tests
+  gem 'poltergeist'
+  # clean the test database after tests where JavaScript was executed
+  gem 'database_cleaner'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
