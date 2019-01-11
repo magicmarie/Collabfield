@@ -51,6 +51,7 @@ group :development do
   gem 'devise'
   gem 'bootstrap_form'
   gem 'autoprefixer-rails'
+  gem 'faker'
 
 end
 
