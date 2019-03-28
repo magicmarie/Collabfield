@@ -31,8 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-#will_pagination for pagination
+# will_pagination for pagination
 gem 'will_paginate'
+# simpleCov--code coverage analysis tool
+gem 'simplecov', require: false, group: :test
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -68,7 +70,7 @@ group :test do
   # simulate a user's interaction with the app
   gem 'capybara'
   # webdriver for capybara: gives js support to the tests
-  gem 'poltergeist'
+  gem "selenium-webdriver"
   # clean the test database after tests where JavaScript was executed
   gem 'database_cleaner'
 end
