@@ -79,3 +79,4 @@ yarn-debug.log*
 !/storage/.keep
 
 .idea/
+echo "coverage" >> .gitignore

@@ -1,5 +1,4 @@
 module PostsHelper
-
   def create_new_post_partial_path
     if user_signed_in?
       'posts/partials/create_new_post/signed_in'

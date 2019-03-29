@@ -1,10 +1,7 @@
 require 'rails_helper'
 
-
 #:type => :helper treats tests as helper specs and provides us with specific methods
-RSpec.describe NavigationHelper, :type => :helper do
-
-
+RSpec.describe NavigationHelper, type: :helper do
   context 'signed in user' do
     before(:each) { helper.stub(:user_signed_in?).and_return(true) }
 
@@ -12,7 +9,7 @@ RSpec.describe NavigationHelper, :type => :helper do
       it "returns signed_in_links partial's path" do
         expect(helper.collapsible_links_partial_path).to (
                                                              eq 'layouts/navigation/collapsible_elements/signed_in_links'
-                                                         )
+        )
       end
     end
   end
@@ -24,9 +21,8 @@ RSpec.describe NavigationHelper, :type => :helper do
       it "returns non_signed_in_links partial's path" do
         expect(helper.collapsible_links_partial_path).to (
                                                              eq 'layouts/navigation/collapsible_elements/non_signed_in_links'
-                                                         )
+        )
       end
     end
   end
-
 end

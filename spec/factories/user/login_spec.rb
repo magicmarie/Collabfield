@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.feature "Login", :type => :feature do
+RSpec.feature 'Login', type: :feature do
   let(:user) { create(:user) }
 
   # js: true argument allows to test functionalities which involves JavaScript.
@@ -13,5 +13,4 @@ RSpec.feature "Login", :type => :feature do
     find('.login-button').click
     expect(page).to have_selector('#user-settings')
   end
-
 end

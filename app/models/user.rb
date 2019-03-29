@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  #when a user gets deleted, all posts what the user has created will be deleted too.
+  # when a user gets deleted, all posts what the user has created will be deleted too.
   has_many :posts, dependent: :destroy
 end
-
