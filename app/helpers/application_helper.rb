@@ -4,4 +4,5 @@ require 'navigation_helper.rb'
 module ApplicationHelper
   # inject this module into application_helper
   include NavigationHelper
+  include PostsHelper
 end
