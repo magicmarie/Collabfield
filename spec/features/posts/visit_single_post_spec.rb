@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Visit single post', type: :feature do
-  let(:user) { create(:user) }
-  let(:post) { create(:post) }
+  let(:user) { double(:user) }
+  let(:post) { double(:post) }
 
   scenario 'User goes to a single post from the home page', js: true do
     post
