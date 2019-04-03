@@ -5,9 +5,8 @@ RSpec.feature 'Login', type: :feature do
 
   # js: true argument allows to test functionalities which involves JavaScript.
   scenario 'user navigates to the login page and succesfully logs in', js: true do
-    user
     visit '/'
-    find('nav a', text: 'Login').click
+    page.find('nav a', text: 'Login', visible: false).click
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
     find('.login-button').click

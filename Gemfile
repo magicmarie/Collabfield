@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'bootstrap'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -34,6 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate'
 # simpleCov--code coverage analysis tool
 gem 'simplecov', require: false, group: :test
+gem 'pry-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -41,6 +43,14 @@ gem 'simplecov', require: false, group: :test
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # testing framework
+  gem 'rspec-rails', '~> 3.6'
+  # used to create sample data
+  gem 'factory_bot_rails'
+  # simulate a user's interaction with the app
+  gem 'capybara'
+  # webdriver for capybara: gives js support to the tests
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -49,7 +59,6 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'autoprefixer-rails'
-  gem 'bootstrap-sass',  '~> 3.3.6'
   gem 'bootstrap_form'
   gem 'devise'
   gem 'faker'
@@ -58,19 +67,12 @@ group :development do
 end
 
 group :test do
-  # testing framework
-  gem 'rspec-rails', '~> 3.6'
-  # used to create sample data
-  gem 'factory_bot'
   gem 'rails-controller-testing'
   # support headless drivers
   gem 'headless'
-  # simulate a user's interaction with the app
-  gem 'capybara'
-  # webdriver for capybara: gives js support to the tests
-  gem 'selenium-webdriver'
   # clean the test database after tests where JavaScript was executed
   gem 'database_cleaner'
+  gem "chromedriver-helper"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

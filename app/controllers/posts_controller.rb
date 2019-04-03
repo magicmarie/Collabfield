@@ -36,5 +36,6 @@ class PostsController < ApplicationController
     elsif category.present? && search.present?
       posts = Post.by_category(branch, category).search(search)
     else
-    end  end
+    end
+  end
 end
