@@ -36,4 +36,13 @@ a:hover, a:active, a:link, a:visited {
 .login-button, .sign-up-button {
   background-color: $navbarColor;
   color: white !important;
+  font-size: 1.5rem;
+}
+
+.container {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
 }

@@ -89,7 +89,6 @@ end
 
 Capybara.server = :puma
 Capybara.javascript_driver = :selenium_chrome
-Capybara.ignore_hidden_elements = false
 
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)

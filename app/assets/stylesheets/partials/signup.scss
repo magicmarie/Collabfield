@@ -1,9 +1,28 @@
-#sign-up-form {
+#sign-up-form, #login-form {
   margin-top: 100px;
   h1 {
     font-size: 36px !important;
     font-size: 3.6rem !important;
   }
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  width: 80%;
+}
+
+.form-control {
+  font-size: 2rem !important;
+}
+
+.checkbox {
+  float: left;
+  margin-top: 14px;
+}
+
+.btn {
+  margin-top: 15px !important;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
 }

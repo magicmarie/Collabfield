@@ -1,4 +1,4 @@
-.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+.navbar-expand-lg, .navbar-toggler:focus, .collapsed, button.navbar-toggler {
   background: $navbarColor !important;
   border: none;
   a {
@@ -7,7 +7,8 @@
 }
 
 nav {
-  .navbar-header {
+  .navbar-brand {
+    font-size: 20px;
     width: 100%;
     button, .navbar-brand {
       transition: opacity 0.15s;
@@ -69,4 +70,14 @@ body {
 .dropdown-menu a:hover {
   color: black !important;
   background: white !important;
+}
+
+#user-settings {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.dropdown-item {
+  font-size: 17px !important;
+  font-size: 1.7rem !important;
 }

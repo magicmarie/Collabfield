@@ -1,29 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <h2 class="text-center">Log in</h2>
+<div class="container" id="login-form">
+      <h1 class="text-center">Log in</h1>
 
-      <%= bootstrap_form_for(resource,
+      <%= form_for(resource,
                              as: resource_name,
                              url: session_path(resource_name)) do |f| %>
 
+        <label>Email address</label>
         <%= f.email_field :email,
                           autofocus: true,
                           class: 'form-control',
                           placeholder: 'email' %>
 
+        <label>Password</label>
         <%= f.password_field  :password,
                               autocomplete: "off",
                               class: 'form-control',
                               placeholder: 'password' %>
 
-
-        <% if devise_mapping.rememberable? -%>
-          <%= f.check_box :remember_me %>
-        <% end -%>
-
-        <%= f.submit "Log in", class: 'form-control login-button' %>
+        <div class="checkbox">
+          <% if devise_mapping.rememberable? -%>
+            <h3><%= f.check_box :remember_me%>Remember me</h3>
+          <% end -%>
+        </div>
+        <br/>
+        <%= f.submit "Log in", class: 'form-control btn login-button' %>
       <% end %>
-    </div>
-  </div>
 </div>
