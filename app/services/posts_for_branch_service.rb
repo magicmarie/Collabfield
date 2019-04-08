@@ -1,3 +1,5 @@
+require 'application_helper'
+
 class PostsForBranchService
   def initialize(params)
     @search = params[:search]
@@ -17,6 +19,7 @@ class PostsForBranchService
       posts = Post.by_category(@branch, @category).search(@search)
     else
     end
+    posts
   end
 
 end

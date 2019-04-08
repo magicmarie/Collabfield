@@ -1,5 +1,5 @@
 require 'rails_helper'
-require './app/services/posts_Service.rb'
+require_relative '../../app/services/posts_for_branch_service.rb'
 
 RSpec.describe PostsForBranchService do
 
